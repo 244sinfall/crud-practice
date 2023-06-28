@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  redis:
+    image: redis/redis-stack-server:latest
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2000M
+  clickhouse:
+    image: yandex/clickhouse-server
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+      - "9009:9009"
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2000M
+  crud-analyzer:
+    build: .
+    image: crud-practice:latest
+    depends_on:
+      - redis
+      - clickhouse
+
+#После завершения crud-analyzer введите команду, чтобы скопировать результат:
+# 'docker cp crud-practice-crud-analyzer-1:/usr/src/app/output.html .'

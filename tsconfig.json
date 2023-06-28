@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "node16",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+}

@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Результаты измерений</title>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+Результаты измерений между: Redis, Clickhouse
+</header>
+<main>
+<p class="title">Для 10 измерений самым быстрым оказался: <strong>Redis</strong></p><div class="tables"><div class="table"><p class="table-title">Redis</p>
+<table>
+<thead>
+<tr>
+<th></th><th>#1</th><th>#2</th><th>#3</th><th>#4</th><th>#5</th><th>Мат.ожидание</th><th>Дисперсия</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>CREATE</strong></td><td>21 мс.</td><td>15 мс.</td><td>18 мс.</td><td>14 мс.</td><td>16 мс.</td><td>17</td><td>6</td></tr><tr><td><strong>DELETE</strong></td><td>14 мс.</td><td>13 мс.</td><td>21 мс.</td><td>13 мс.</td><td>9 мс.</td><td>14</td><td>14</td></tr><tr><td><strong>READ</strong></td><td>14 мс.</td><td>12 мс.</td><td>12 мс.</td><td>13 мс.</td><td>12 мс.</td><td>13</td><td>1</td></tr><tr><td><strong>UPDATE</strong></td><td>17 мс.</td><td>13 мс.</td><td>16 мс.</td><td>12 мс.</td><td>10 мс.</td><td>13</td><td>7</td></tr><tr><td><strong>TOTAL</strong></td><td>64 мс.</td><td>51 мс.</td><td>65 мс.</td><td>50 мс.</td><td>46 мс.</td><td>55</td><td>61</td></tr>
+</tbody>
+</table></div>
+        <div class="table"><p class="table-title">Clickhouse</p>
+<table>
+<thead>
+<tr>
+<th></th><th>#1</th><th>#2</th><th>#3</th><th>#4</th><th>#5</th><th>Мат.ожидание</th><th>Дисперсия</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>CREATE</strong></td><td>80 мс.</td><td>70 мс.</td><td>68 мс.</td><td>72 мс.</td><td>65 мс.</td><td>71</td><td>27</td></tr><tr><td><strong>DELETE</strong></td><td>205 мс.</td><td>149 мс.</td><td>214 мс.</td><td>250 мс.</td><td>153 мс.</td><td>194</td><td>1482</td></tr><tr><td><strong>READ</strong></td><td>119 мс.</td><td>120 мс.</td><td>68 мс.</td><td>74 мс.</td><td>95 мс.</td><td>95</td><td>464</td></tr><tr><td><strong>UPDATE</strong></td><td>286 мс.</td><td>218 мс.</td><td>151 мс.</td><td>163 мс.</td><td>159 мс.</td><td>196</td><td>2593</td></tr><tr><td><strong>TOTAL</strong></td><td>688 мс.</td><td>555 мс.</td><td>500 мс.</td><td>558 мс.</td><td>471 мс.</td><td>554</td><td>5563</td></tr>
+</tbody>
+</table></div>
+        </div><p class="title">Для 100 измерений самым быстрым оказался: <strong>Redis</strong></p><div class="tables"><div class="table"><p class="table-title">Redis</p>
+<table>
+<thead>
+<tr>
+<th></th><th>#1</th><th>#2</th><th>#3</th><th>#4</th><th>#5</th><th>Мат.ожидание</th><th>Дисперсия</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>CREATE</strong></td><td>141 мс.</td><td>105 мс.</td><td>99 мс.</td><td>100 мс.</td><td>120 мс.</td><td>113</td><td>258</td></tr><tr><td><strong>DELETE</strong></td><td>97 мс.</td><td>98 мс.</td><td>98 мс.</td><td>147 мс.</td><td>106 мс.</td><td>109</td><td>367</td></tr><tr><td><strong>READ</strong></td><td>95 мс.</td><td>103 мс.</td><td>103 мс.</td><td>139 мс.</td><td>95 мс.</td><td>107</td><td>271</td></tr><tr><td><strong>UPDATE</strong></td><td>93 мс.</td><td>100 мс.</td><td>110 мс.</td><td>120 мс.</td><td>93 мс.</td><td>103</td><td>108</td></tr><tr><td><strong>TOTAL</strong></td><td>425 мс.</td><td>405 мс.</td><td>408 мс.</td><td>505 мс.</td><td>413 мс.</td><td>431</td><td>1398</td></tr>
+</tbody>
+</table></div>
+        <div class="table"><p class="table-title">Clickhouse</p>
+<table>
+<thead>
+<tr>
+<th></th><th>#1</th><th>#2</th><th>#3</th><th>#4</th><th>#5</th><th>Мат.ожидание</th><th>Дисперсия</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>CREATE</strong></td><td>797 мс.</td><td>1032 мс.</td><td>860 мс.</td><td>774 мс.</td><td>722 мс.</td><td>837</td><td>11481</td></tr><tr><td><strong>DELETE</strong></td><td>1633 мс.</td><td>1698 мс.</td><td>1600 мс.</td><td>1687 мс.</td><td>1461 мс.</td><td>1616</td><td>7228</td></tr><tr><td><strong>READ</strong></td><td>745 мс.</td><td>775 мс.</td><td>1196 мс.</td><td>739 мс.</td><td>1055 мс.</td><td>902</td><td>35477</td></tr><tr><td><strong>UPDATE</strong></td><td>1691 мс.</td><td>1766 мс.</td><td>2028 мс.</td><td>1902 мс.</td><td>2178 мс.</td><td>1913</td><td>30854</td></tr><tr><td><strong>TOTAL</strong></td><td>4864 мс.</td><td>5269 мс.</td><td>5683 мс.</td><td>5101 мс.</td><td>5414 мс.</td><td>5266</td><td>76961</td></tr>
+</tbody>
+</table></div>
+        </div><p class="title">Для 1000 измерений самым быстрым оказался: <strong>Redis</strong></p><div class="tables"><div class="table"><p class="table-title">Redis</p>
+<table>
+<thead>
+<tr>
+<th></th><th>#1</th><th>#2</th><th>#3</th><th>#4</th><th>#5</th><th>Мат.ожидание</th><th>Дисперсия</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>CREATE</strong></td><td>1130 мс.</td><td>1156 мс.</td><td>905 мс.</td><td>1099 мс.</td><td>1173 мс.</td><td>1092</td><td>9450</td></tr><tr><td><strong>DELETE</strong></td><td>979 мс.</td><td>908 мс.</td><td>1083 мс.</td><td>1080 мс.</td><td>1228 мс.</td><td>1056</td><td>11782</td></tr><tr><td><strong>READ</strong></td><td>1162 мс.</td><td>1258 мс.</td><td>961 мс.</td><td>1214 мс.</td><td>1000 мс.</td><td>1119</td><td>13876</td></tr><tr><td><strong>UPDATE</strong></td><td>1228 мс.</td><td>1039 мс.</td><td>1055 мс.</td><td>1380 мс.</td><td>946 мс.</td><td>1129</td><td>23932</td></tr><tr><td><strong>TOTAL</strong></td><td>4497 мс.</td><td>4359 мс.</td><td>4002 мс.</td><td>4771 мс.</td><td>4346 мс.</td><td>4395</td><td>62021</td></tr>
+</tbody>
+</table></div>
+        <div class="table"><p class="table-title">Clickhouse</p>
+<table>
+<thead>
+<tr>
+<th></th><th>#1</th><th>#2</th><th>#3</th><th>#4</th><th>#5</th><th>Мат.ожидание</th><th>Дисперсия</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><strong>CREATE</strong></td><td>7622 мс.</td><td>9161 мс.</td><td>9235 мс.</td><td>9127 мс.</td><td>8791 мс.</td><td>8787</td><td>362698</td></tr><tr><td><strong>DELETE</strong></td><td>19942 мс.</td><td>22893 мс.</td><td>15523 мс.</td><td>15982 мс.</td><td>15349 мс.</td><td>17938</td><td>8985206</td></tr><tr><td><strong>READ</strong></td><td>7698 мс.</td><td>9387 мс.</td><td>7178 мс.</td><td>6127 мс.</td><td>8651 мс.</td><td>7808</td><td>1288152</td></tr><tr><td><strong>UPDATE</strong></td><td>16962 мс.</td><td>20795 мс.</td><td>14103 мс.</td><td>12905 мс.</td><td>16248 мс.</td><td>16203</td><td>7391107</td></tr><tr><td><strong>TOTAL</strong></td><td>52222 мс.</td><td>62234 мс.</td><td>46038 мс.</td><td>44139 мс.</td><td>49038 мс.</td><td>50734</td><td>40580658</td></tr>
+</tbody>
+</table></div>
+        </div>
+</main>
+<footer>
+Работа студента ЗКИ21-16Б Филина Дмитрия Алексеевича
+</footer>
+</body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        font-family: 'Roboto', sans-serif;;
+        background-color: gainsboro;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    header, footer {
+        background-color: rgba(0, 0, 0, 0.95);
+        color: #d2d2d2;
+        text-align: center;
+        padding: 20px;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    footer {
+        margin-top: auto;
+        text-align: center;
+    }
+    .title {
+        margin-top: 2rem;
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .tables {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+        place-items: center;
+        padding: 1.5rem;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid black;
+        padding: 0.1rem;
+        text-align: center;
+
+    }
+    .table-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.125rem;
+    }
+</style>
+</html>
+       
